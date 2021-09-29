@@ -1,0 +1,952 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&family=Roboto:wght@100;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
+
+html body {
+  margin: 0;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Theme Colors */
+  --primaryColor: #11c1a2;
+  --SecondaryColor: #35d4c1;
+  --bgColor: #393939;
+  --bgLight: #5c5c5c;
+  --white: #ffffff;
+  --bgNav: #353535;
+  --bgThoughts: #bbb;
+
+  /* Fonts */
+  --Rajdhani: "Rajdhani", sans-serif;
+  --Roboto: "Roboto", sans-serif;
+  --BirthStone: "Birthstone", cursive;
+}
+
+/* Global Styles */
+
+body {
+  background-color: var(--bgColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: var(--primaryColor);
+  color: var(--white);
+  font-size: 20px;
+  border: none;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  font-family: var(--Roboto);
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.wrapper {
+  padding: 0 15rem;
+}
+
+/* End of Global Styles */
+
+/* Header */
+.nav-li,
+.nav-a {
+  font-family: var(--Rajdhani);
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 13pt;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  background: var(--bgNav);
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem 0;
+  height: 2.3rem;
+  width: 100%;
+}
+.logo {
+  cursor: pointer;
+  height: 3.7rem;
+  width: 3.7rem;
+}
+.nav_list {
+  list-style: none;
+}
+.nav_list li {
+  display: inline-block;
+  padding: 0 1.1rem;
+}
+
+.nav_list li a {
+  transition: all 0.3s ease 0s;
+}
+.nav_list li a:hover {
+  color: var(--primaryColor);
+}
+
+/* End of Header */
+
+/* HOME */
+
+#home {
+  display: flex;
+  background-color: var(--bgNav);
+}
+
+.home-text {
+  margin: auto 0;
+}
+
+.home-slider {
+  height: 90vh;
+  overflow: hidden;
+}
+
+/* responsiveness */
+@media screen and (max-width: 600px) {
+  #home {
+    display: block;
+  }
+  #home h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+  #home h5 {
+    font-size: 20px;
+  }
+  .logo {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 1rem;
+  }
+  .nav_list li {
+    padding: 1px;
+  }
+  .nav_list li a {
+    font-size: 10px;
+  }
+  #subject-table {
+    font-size: 10px;
+  }
+  .commission p {
+    font-size: 12px;
+  }
+  .cards a {
+    font-size: 10px;
+  }
+  .wrapper {
+    padding: 0;
+  }
+  .commission-sections {
+    display: block !important;
+  }
+  .thoughts-comment {
+    display: block !important;
+  }
+  .selector {
+    display: none !important;
+  }
+  .thoughts-log,
+  .thoughts-form {
+    width: 100%;
+  }
+
+  .thoughts-log,
+  .thoughts-form {
+    width: 100% !important;
+  }
+  .header-btns {
+    margin-bottom: 5vh !important;
+  }
+  .contact-us-heading {
+    font-size: 10pt;
+  }
+  #contact p {
+    padding: 0 1rem;
+  }
+  .galleryboard .cards .card a {
+    writing-mode: vertical-lr !important;
+    text-orientation: upright !important;
+    font-size: 20pt !important;
+    font-weight: 900 !important;
+  }
+  .thought-comment-one p {
+    margin: 3vh 0 0 10pt !important;
+  }
+  .thoughts-user-img {
+    margin-left: -40pt !important;
+    margin-top: 1vh !important;
+  }
+  .thought-image {
+    width: 85% !important;
+  }
+  .commission p {
+    padding: 0 1rem !important;
+  }
+  .btn {
+    width: 60% !important;
+    font-size: 13pt !important;
+    padding: 0.5rem 1rem !important;
+    margin: 6vh 20%;
+  }
+  .about-sections {
+    display: block !important;
+    font-size: 15px !important;
+  }
+  #contact {
+    display: block !important;
+  }
+
+  footer .container {
+    display: block !important;
+  }
+  .social-icons {
+    display: block !important;
+  }
+  .contact-text p {
+    padding: 0;
+  }
+}
+.home-text,
+.home-slider {
+  flex: 1;
+}
+
+.home-text h1,
+.home-text h5 {
+  padding: 0 4rem;
+  line-height: 1pt;
+  font-family: var(--Rajdhani);
+}
+
+.home-text h1 {
+  color: var(--white);
+  font-size: 70pt;
+}
+
+.home-text h5 {
+  color: var(--SecondaryColor);
+  font-size: 30pt;
+}
+
+.header-txt {
+  padding: 0 4rem;
+  margin-top: 3rem;
+  text-align: justify;
+  color: var(--white);
+  line-height: 1.3rem;
+  font-family: var(--Rajdhani);
+}
+
+.header-quote {
+  padding: 0 4rem;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  font-family: var(--BirthStone);
+  color: var(--white);
+  text-align: right;
+}
+
+.home-slider-slideshow {
+  width: 100%;
+  height: 90vh;
+}
+
+.home-slider-slideshow img {
+  width: 100%;
+}
+
+.selector {
+  position: absolute;
+  bottom: 30px;
+  right: 20%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: var(--bgThoughts);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: var(--SecondaryColor);
+}
+
+.header-btn1 {
+  background-color: var(--primaryColor);
+  color: var(--white);
+  font-size: 15px;
+  border: none;
+  padding: 0.75rem 1.3rem;
+  border-radius: 10px;
+  font-family: var(--Roboto);
+  text-transform: uppercase;
+  margin-right: 1rem;
+}
+
+.header-btn2 {
+  background-color: transparent;
+  color: var(--primaryColor);
+  font-size: 15px;
+  border: solid 0.1rem var(--primaryColor);
+  padding: 0.7rem 1.3rem;
+  border-radius: 10px;
+  font-family: var(--Roboto);
+  text-transform: uppercase;
+}
+
+.header-btns {
+  display: flex;
+  justify-content: left;
+  margin: 4rem 4rem 0 4rem;
+}
+/* End of HOME */
+
+/* Gallery Styles */
+.heading {
+  text-align: center;
+}
+.galleryboard {
+  margin-top: 2%;
+}
+.galleryboard .cards {
+  text-align: center;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+}
+.galleryboard .cards .card {
+  min-width: calc(20%);
+  min-height: 100%;
+  text-align: center;
+  background-size: content;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 500ms cubic-bezier(1, 0.02, 0, 0.98);
+  vertical-align: middle;
+}
+.galleryboard .cards .card a {
+  font-size: 60px;
+  font-family: var(--Rajdhani);
+  text-transform: capitalize;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transition: 250ms cubic-bezier(1, 0.02, 0, 0.98);
+}
+.galleryboard .p1 {
+  background: url("https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&q=80")
+    rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+}
+.galleryboard .p2 {
+  background: url("https://images.unsplash.com/photo-1484406566174-9da000fda645?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=989&q=80")
+    rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+}
+.galleryboard .p3 {
+  background: url("https://images.unsplash.com/photo-1555169062-013468b47731?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=987&q=80")
+    rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+}
+.galleryboard .p4 {
+  background: url("https://images.unsplash.com/photo-1533558837877-f9a97ac5ba0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1064&q=80")
+    rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+}
+
+.open {
+  min-width: 90% !important;
+}
+.open a {
+  top: 100% !important;
+}
+
+.close {
+  min-width: 0% !important;
+}
+.close a {
+  top: -50% !important;
+}
+
+#gallery,
+#gallery1,
+#gallery2,
+#gallery3 {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  margin-top: 40px;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  display: none;
+}
+@media (max-width: 1200px) {
+  #gallery,
+  #gallery1,
+  #gallery2,
+  #gallery3 {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+  }
+}
+@media (max-width: 800px) {
+  #gallery,
+  #gallery1,
+  #gallery2,
+  #gallery3 {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  #gallery,
+  #gallery1,
+  #gallery2,
+  #gallery3 {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+#gallery img,
+#gallery1 img,
+#gallery2 img,
+#gallery3 img {
+  width: 100%;
+  height: auto;
+  margin: 4% auto;
+  box-shadow: -3px 5px 15px #000;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.black-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  width: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.icon-box {
+  position: absolute;
+  top: 6%;
+  right: 11%;
+}
+.icon-box i {
+  font-size: 20px;
+}
+
+.portfolio-info .image {
+  margin-top: 25px;
+  border-radius: 20px;
+  box-shadow: 5px 10px soild #11c1a2;
+}
+.portfolio-info {
+  text-align: center;
+  z-index: 99999;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  background-color: var(--bgLight);
+}
+.addtocart {
+  background-color: var(--primaryColor);
+  color: var(--white);
+  font-size: 15px;
+  border: none;
+  padding: 1rem 1.3rem;
+  border-radius: 10px;
+  font-family: var(--Roboto);
+  text-transform: uppercase;
+}
+
+.contact-btn:hover {
+  cursor: pointer;
+}
+
+/* End of Gallery Styles*/
+
+/*Start of the contact us style*/
+.contact-us-heading {
+  color: var(--primaryColor);
+  font-family: var(--Roboto);
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 4rem;
+}
+.heading-contact {
+  font-family: var(--Roboto);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+#contactme-section {
+  padding-bottom: 10rem;
+}
+
+#contact {
+  margin-top: 3rem 3%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#contact p {
+  font-size: 24px;
+  font-family: var(--Rajdhani);
+  text-align: justify;
+}
+
+.contact-text,
+.contact-form {
+  flex: 1;
+}
+
+.contact-text h1,
+.contact-text h5 {
+  text-align: center;
+  color: var(--white);
+  line-height: 0.3rem;
+  font-family: var(--Rajdhani);
+}
+
+.contact-text p {
+  padding: 0 5rem;
+  font-size: 18px;
+  margin-top: 3rem;
+  text-align: justify;
+  color: var(--white);
+  font-family: var(--Rajdhani);
+}
+
+.contact-form-upline {
+  display: flex;
+  justify-content: space-between;
+  width: 87%;
+}
+
+.cont-form-up {
+  flex: 1;
+  height: 2.5rem;
+  margin: 1rem 1rem 0 0;
+  border-radius: 0.3rem;
+  padding-left: 0.5rem;
+  font-size: 22px;
+  background-color: transparent;
+  border: solid 0.1rem white;
+}
+
+.contact-inputfield {
+  margin: 1rem auto;
+  height: 2.5rem;
+  width: 84%;
+  font-size: 22px;
+  border-radius: 0.3rem;
+  background-color: transparent;
+  border: solid 0.1rem white;
+}
+
+.cont-textarea {
+  height: 5rem;
+  margin: 1rem auto;
+  border-radius: 0.3rem;
+  padding-left: 0.5rem;
+  width: 84%;
+  font-size: 22px;
+  background-color: transparent;
+  border: solid 0.1rem white;
+}
+
+.contact-btn {
+  background-color: var(--primaryColor);
+  color: var(--white);
+  font-size: 15px;
+  border: none;
+  padding: 1rem 1.3rem;
+  border-radius: 10px;
+  font-family: var(--Roboto);
+  text-transform: uppercase;
+  margin-left: 55%;
+}
+
+.contact-btn:hover {
+  cursor: pointer;
+}
+/*End of the contact us style*/
+
+/* Commission Styles */
+
+.commission {
+  background-color: var(--bgLight);
+}
+
+.commission p {
+  font-size: 24px;
+  font-family: var(--Rajdhani);
+  text-align: justify;
+}
+
+#subject-table {
+  font-family: var(--Roboto);
+  border-collapse: collapse;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+#subject-table td,
+#subject-table th {
+  border: 1px solid var(--bgLight);
+  padding: 8px;
+}
+
+#subject-table th {
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: var(--primaryColor);
+  color: white;
+}
+
+#subject-table td {
+  padding: 1.7rem 0;
+  text-align: center;
+  background-color: var(--bgColor);
+  color: white;
+}
+
+.commission-sections {
+  display: flex;
+  margin-top: 4rem;
+}
+
+.left-section {
+  flex: 1;
+  padding: 0 2rem;
+  text-align: justify;
+}
+
+.left-section img {
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.right-section {
+  flex: 1;
+  padding: 0 2rem;
+  text-align: justify;
+}
+
+/* End of Commission Styles */
+
+/* THOUGHTS */
+
+.thoughts-comment {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 10%;
+}
+.thoughts-log,
+.thoughts-form {
+  width: 40%;
+  text-align: center;
+  /* border: solid 1px white; */
+}
+
+.thought-comment-one {
+  background-color: var(--bgThoughts);
+  width: 80%;
+  border-radius: 3pt;
+  display: flex;
+  margin: 20pt auto;
+}
+
+.thoughts-user-img {
+  width: 10rem;
+  height: 50pt;
+  margin-left: -30pt;
+}
+
+.one-user {
+  /* flex-direction: column; */
+  flex: 1;
+  width: 30%;
+}
+
+.one-comment {
+  flex-direction: column;
+  /* width: 100%; */
+  flex-grow: 4;
+}
+
+.rply-sec {
+  font-size: 11pt;
+  display: flex;
+  position: absolute;
+  font-family: var(--Rajdhani);
+  margin-left: 80pt;
+  margin-top: 25pt;
+}
+
+.cmnt {
+  margin-right: 20pt;
+}
+.reply-span {
+  color: #0000ff;
+  font-weight: 900;
+}
+#heart-img {
+  height: 11pt;
+  width: 13pt;
+  margin-left: 10pt;
+  margin-top: -0.1pt;
+  font-family: var(--Rajdhani);
+}
+.thought-comment-one p {
+  color: black;
+  font-family: var(--Rajdhani);
+}
+
+.comment-user-img {
+  width: 10rem;
+  height: 50pt;
+}
+
+.comment-form {
+  display: block;
+  margin-top: 1rem;
+}
+
+.comment-field {
+  margin: 0.5rem auto;
+  height: 2rem;
+  width: 84%;
+  font-size: 18px;
+  border-radius: 0.3rem;
+  background-color: transparent;
+  border: solid 0.1rem white;
+  padding-left: 10pt;
+}
+
+.submitBtn {
+  background-color: var(--primaryColor);
+  color: var(--white);
+  font-size: 15px;
+  border: none;
+  padding: 0.8rem 1.3rem;
+  border-radius: 10px;
+  font-family: var(--Roboto);
+  text-transform: uppercase;
+  width: 88%;
+  /* margin-left: 55%; */
+}
+
+.thought-slider-images {
+  text-align: center;
+  margin: 10vh 5px 0 5px;
+}
+
+.thought-image {
+  width: 65%;
+  margin: 0 5px 2vh 5px;
+}
+
+/* END OF THOUGHTS */
+
+/* About Us Styles */
+
+#about {
+  background-color: var(--bgLight);
+}
+.about-sections {
+  display: flex;
+  margin-top: 4rem;
+}
+
+.about-sections p {
+  font-size: 24px;
+  font-family: var(--Rajdhani);
+  text-align: justify;
+}
+
+#name {
+  color: var(--primaryColor);
+}
+
+.image-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.image-group img {
+  width: 90%;
+}
+
+.image-couple {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.image-couple img {
+  height: 50vh;
+  width: 45%;
+}
+
+/* End of About Us Styles */
+
+/* footer */
+
+footer {
+  padding: 3.9rem 0;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+footer .container {
+  max-width: 122.5rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.back-to-top {
+  width: 7rem;
+  height: 7rem;
+  background-color: #121212;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.back-to-top i {
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem;
+  animation: up 2s infinite;
+}
+
+.social-sections {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.newsletter-form {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-input {
+  width: 110%;
+  max-width: 25rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.4rem;
+  margin-top: 1.5rem;
+}
+
+.newsletter-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--main-font-color-dark);
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 1px 0.6rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10.5rem;
+}
+
+.social-icons {
+  list-style-type: none;
+  margin-bottom: 5.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons i {
+  font-size: 2rem;
+  color: var(--white);
+  padding: 2.8rem 2rem;
+  opacity: 0.5;
+  transition: color 0.5s;
+}
+
+.social-icons i:hover,
+.social-icons i:focus {
+  color: var(--SecondaryColor);
+}
+
+.follow-social h4,
+.newsletter h4 {
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  margin-bottom: 3rem;
+  font-family: var(--Roboto);
+}
+
+.footer-content {
+  overflow: hidden;
+}
+
+#copyrights {
+  font-family: var(--Rajdhani);
+  font-size: 14pt;
+}
+/* End of footer styles */
